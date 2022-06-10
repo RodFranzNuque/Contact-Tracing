@@ -1,0 +1,17 @@
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\Contact-Tracing-App.exe
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\Contact-Tracing-App.deps.json
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\Contact-Tracing-App.runtimeconfig.json
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\Contact-Tracing-App.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\Contact-Tracing-App.pdb
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.csproj.AssemblyReference.cache
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact_Tracing_App.ContactTracingForm.resources
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.csproj.GenerateResource.cache
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.AssemblyInfoInputs.cache
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.AssemblyInfo.cs
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.csproj.CoreCompileInputs.cache
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\refint\Contact-Tracing-App.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.pdb
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.genruntimeconfig.cache
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\ref\Contact-Tracing-App.dll
