@@ -114,6 +114,7 @@
             this.Namelabel.Size = new System.Drawing.Size(76, 23);
             this.Namelabel.TabIndex = 3;
             this.Namelabel.Text = "Name:";
+            this.Namelabel.Click += new System.EventHandler(this.Namelabel_Click);
             // 
             // SexLabel
             // 
@@ -151,6 +152,7 @@
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(125, 27);
             this.DateTextbox.TabIndex = 9;
+            this.DateTextbox.TextChanged += new System.EventHandler(this.DateTextbox_TextChanged);
             // 
             // TimeinLabel
             // 
@@ -182,6 +184,7 @@
             this.TimeoutLabel.Size = new System.Drawing.Size(98, 23);
             this.TimeoutLabel.TabIndex = 12;
             this.TimeoutLabel.Text = "Time out:";
+            this.TimeoutLabel.Click += new System.EventHandler(this.TimeoutLabel_Click);
             // 
             // TimeoutTextbox
             // 
@@ -189,6 +192,7 @@
             this.TimeoutTextbox.Name = "TimeoutTextbox";
             this.TimeoutTextbox.Size = new System.Drawing.Size(141, 27);
             this.TimeoutTextbox.TabIndex = 13;
+            this.TimeoutTextbox.TextChanged += new System.EventHandler(this.TimeoutTextbox_TextChanged);
             // 
             // AddressLabel
             // 
@@ -208,6 +212,7 @@
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(501, 27);
             this.AddressTextBox.TabIndex = 15;
+            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
             // 
             // ContactNumberLabel
             // 
@@ -227,6 +232,7 @@
             this.ContactNumberTextbox.Name = "ContactNumberTextbox";
             this.ContactNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.ContactNumberTextbox.TabIndex = 17;
+            this.ContactNumberTextbox.TextChanged += new System.EventHandler(this.ContactNumberTextbox_TextChanged);
             // 
             // VisitorInfoLabel
             // 
@@ -235,9 +241,10 @@
             this.VisitorInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
             this.VisitorInfoLabel.Location = new System.Drawing.Point(23, 238);
             this.VisitorInfoLabel.Name = "VisitorInfoLabel";
-            this.VisitorInfoLabel.Size = new System.Drawing.Size(344, 40);
+            this.VisitorInfoLabel.Size = new System.Drawing.Size(335, 40);
             this.VisitorInfoLabel.TabIndex = 18;
             this.VisitorInfoLabel.Text = "Visitor\'s Information:";
+            this.VisitorInfoLabel.Click += new System.EventHandler(this.VisitorInfoLabel_Click);
             // 
             // EmergencyContactInfoLabel
             // 
@@ -246,7 +253,7 @@
             this.EmergencyContactInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
             this.EmergencyContactInfoLabel.Location = new System.Drawing.Point(23, 437);
             this.EmergencyContactInfoLabel.Name = "EmergencyContactInfoLabel";
-            this.EmergencyContactInfoLabel.Size = new System.Drawing.Size(556, 40);
+            this.EmergencyContactInfoLabel.Size = new System.Drawing.Size(539, 40);
             this.EmergencyContactInfoLabel.TabIndex = 19;
             this.EmergencyContactInfoLabel.Text = "Emergency Contact Information:";
             this.EmergencyContactInfoLabel.Click += new System.EventHandler(this.label1_Click_4);
@@ -257,6 +264,7 @@
             this.EmergencyNumberTextbox.Name = "EmergencyNumberTextbox";
             this.EmergencyNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.EmergencyNumberTextbox.TabIndex = 32;
+            this.EmergencyNumberTextbox.TextChanged += new System.EventHandler(this.EmergencyNumberTextbox_TextChanged);
             // 
             // EmergencyNumberLabel
             // 
@@ -268,6 +276,7 @@
             this.EmergencyNumberLabel.Size = new System.Drawing.Size(179, 23);
             this.EmergencyNumberLabel.TabIndex = 31;
             this.EmergencyNumberLabel.Text = "Contact Number:";
+            this.EmergencyNumberLabel.Click += new System.EventHandler(this.EmergencyNumberLabel_Click);
             // 
             // EmergencyAddressTextbox
             // 
@@ -275,6 +284,7 @@
             this.EmergencyAddressTextbox.Name = "EmergencyAddressTextbox";
             this.EmergencyAddressTextbox.Size = new System.Drawing.Size(501, 27);
             this.EmergencyAddressTextbox.TabIndex = 30;
+            this.EmergencyAddressTextbox.TextChanged += new System.EventHandler(this.EmergencyAddressTextbox_TextChanged);
             // 
             // EmergencyAddressLabel
             // 
@@ -286,6 +296,7 @@
             this.EmergencyAddressLabel.Size = new System.Drawing.Size(94, 23);
             this.EmergencyAddressLabel.TabIndex = 29;
             this.EmergencyAddressLabel.Text = "Address:";
+            this.EmergencyAddressLabel.Click += new System.EventHandler(this.EmergencyAddressLabel_Click);
             // 
             // EmergencyNameTextbox
             // 
@@ -293,6 +304,7 @@
             this.EmergencyNameTextbox.Name = "EmergencyNameTextbox";
             this.EmergencyNameTextbox.Size = new System.Drawing.Size(307, 27);
             this.EmergencyNameTextbox.TabIndex = 22;
+            this.EmergencyNameTextbox.TextChanged += new System.EventHandler(this.EmergencyNameTextbox_TextChanged);
             // 
             // label6
             // 
@@ -314,10 +326,11 @@
             this.EmergencyNameLabel.Size = new System.Drawing.Size(76, 23);
             this.EmergencyNameLabel.TabIndex = 20;
             this.EmergencyNameLabel.Text = "Name:";
+            this.EmergencyNameLabel.Click += new System.EventHandler(this.EmergencyNameLabel_Click);
             // 
             // DoneButton
             // 
-            this.DoneButton.Location = new System.Drawing.Point(673, 592);
+            this.DoneButton.Location = new System.Drawing.Point(781, 591);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.Size = new System.Drawing.Size(94, 35);
             this.DoneButton.TabIndex = 33;
