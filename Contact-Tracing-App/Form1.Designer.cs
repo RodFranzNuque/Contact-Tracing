@@ -37,8 +37,6 @@
             this.Namelabel = new System.Windows.Forms.Label();
             this.SexLabel = new System.Windows.Forms.Label();
             this.Nametextbox = new System.Windows.Forms.TextBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.DateLabel = new System.Windows.Forms.Label();
             this.DateTextbox = new System.Windows.Forms.TextBox();
             this.TimeinLabel = new System.Windows.Forms.Label();
@@ -58,6 +56,7 @@
             this.EmergencyNameTextbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.EmergencyNameLabel = new System.Windows.Forms.Label();
+            this.DoneButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +109,7 @@
             this.Namelabel.AutoSize = true;
             this.Namelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Namelabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Namelabel.Location = new System.Drawing.Point(23, 267);
+            this.Namelabel.Location = new System.Drawing.Point(23, 284);
             this.Namelabel.Name = "Namelabel";
             this.Namelabel.Size = new System.Drawing.Size(76, 23);
             this.Namelabel.TabIndex = 3;
@@ -121,7 +120,7 @@
             this.SexLabel.AutoSize = true;
             this.SexLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SexLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.SexLabel.Location = new System.Drawing.Point(255, 297);
+            this.SexLabel.Location = new System.Drawing.Point(255, 314);
             this.SexLabel.Name = "SexLabel";
             this.SexLabel.Size = new System.Drawing.Size(0, 37);
             this.SexLabel.TabIndex = 5;
@@ -129,32 +128,18 @@
             // 
             // Nametextbox
             // 
-            this.Nametextbox.Location = new System.Drawing.Point(105, 267);
+            this.Nametextbox.Location = new System.Drawing.Point(105, 284);
             this.Nametextbox.Name = "Nametextbox";
             this.Nametextbox.Size = new System.Drawing.Size(307, 27);
             this.Nametextbox.TabIndex = 6;
             this.Nametextbox.TextChanged += new System.EventHandler(this.Nametextbox_TextChanged);
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(799, 598);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(94, 29);
-            this.SaveButton.TabIndex = 7;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DateLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.DateLabel.Location = new System.Drawing.Point(431, 267);
+            this.DateLabel.Location = new System.Drawing.Point(431, 284);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(62, 23);
             this.DateLabel.TabIndex = 8;
@@ -162,7 +147,7 @@
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(499, 267);
+            this.DateTextbox.Location = new System.Drawing.Point(499, 284);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(125, 27);
             this.DateTextbox.TabIndex = 9;
@@ -172,7 +157,7 @@
             this.TimeinLabel.AutoSize = true;
             this.TimeinLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeinLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeinLabel.Location = new System.Drawing.Point(644, 267);
+            this.TimeinLabel.Location = new System.Drawing.Point(644, 284);
             this.TimeinLabel.Name = "TimeinLabel";
             this.TimeinLabel.Size = new System.Drawing.Size(84, 23);
             this.TimeinLabel.TabIndex = 10;
@@ -181,7 +166,7 @@
             // 
             // TimeInTextbox
             // 
-            this.TimeInTextbox.Location = new System.Drawing.Point(734, 267);
+            this.TimeInTextbox.Location = new System.Drawing.Point(734, 284);
             this.TimeInTextbox.Name = "TimeInTextbox";
             this.TimeInTextbox.Size = new System.Drawing.Size(141, 27);
             this.TimeInTextbox.TabIndex = 11;
@@ -192,7 +177,7 @@
             this.TimeoutLabel.AutoSize = true;
             this.TimeoutLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeoutLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeoutLabel.Location = new System.Drawing.Point(630, 309);
+            this.TimeoutLabel.Location = new System.Drawing.Point(630, 326);
             this.TimeoutLabel.Name = "TimeoutLabel";
             this.TimeoutLabel.Size = new System.Drawing.Size(98, 23);
             this.TimeoutLabel.TabIndex = 12;
@@ -200,7 +185,7 @@
             // 
             // TimeoutTextbox
             // 
-            this.TimeoutTextbox.Location = new System.Drawing.Point(734, 309);
+            this.TimeoutTextbox.Location = new System.Drawing.Point(734, 326);
             this.TimeoutTextbox.Name = "TimeoutTextbox";
             this.TimeoutTextbox.Size = new System.Drawing.Size(141, 27);
             this.TimeoutTextbox.TabIndex = 13;
@@ -210,7 +195,7 @@
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddressLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.AddressLabel.Location = new System.Drawing.Point(23, 309);
+            this.AddressLabel.Location = new System.Drawing.Point(23, 326);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(94, 23);
             this.AddressLabel.TabIndex = 14;
@@ -219,7 +204,7 @@
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(123, 309);
+            this.AddressTextBox.Location = new System.Drawing.Point(123, 326);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(501, 27);
             this.AddressTextBox.TabIndex = 15;
@@ -229,7 +214,7 @@
             this.ContactNumberLabel.AutoSize = true;
             this.ContactNumberLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ContactNumberLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.ContactNumberLabel.Location = new System.Drawing.Point(23, 353);
+            this.ContactNumberLabel.Location = new System.Drawing.Point(23, 370);
             this.ContactNumberLabel.Name = "ContactNumberLabel";
             this.ContactNumberLabel.Size = new System.Drawing.Size(179, 23);
             this.ContactNumberLabel.TabIndex = 16;
@@ -238,7 +223,7 @@
             // 
             // ContactNumberTextbox
             // 
-            this.ContactNumberTextbox.Location = new System.Drawing.Point(208, 353);
+            this.ContactNumberTextbox.Location = new System.Drawing.Point(208, 370);
             this.ContactNumberTextbox.Name = "ContactNumberTextbox";
             this.ContactNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.ContactNumberTextbox.TabIndex = 17;
@@ -248,7 +233,7 @@
             this.VisitorInfoLabel.AutoSize = true;
             this.VisitorInfoLabel.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.VisitorInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.VisitorInfoLabel.Location = new System.Drawing.Point(23, 221);
+            this.VisitorInfoLabel.Location = new System.Drawing.Point(23, 238);
             this.VisitorInfoLabel.Name = "VisitorInfoLabel";
             this.VisitorInfoLabel.Size = new System.Drawing.Size(344, 40);
             this.VisitorInfoLabel.TabIndex = 18;
@@ -259,7 +244,7 @@
             this.EmergencyContactInfoLabel.AutoSize = true;
             this.EmergencyContactInfoLabel.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.EmergencyContactInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyContactInfoLabel.Location = new System.Drawing.Point(23, 420);
+            this.EmergencyContactInfoLabel.Location = new System.Drawing.Point(23, 437);
             this.EmergencyContactInfoLabel.Name = "EmergencyContactInfoLabel";
             this.EmergencyContactInfoLabel.Size = new System.Drawing.Size(556, 40);
             this.EmergencyContactInfoLabel.TabIndex = 19;
@@ -268,7 +253,7 @@
             // 
             // EmergencyNumberTextbox
             // 
-            this.EmergencyNumberTextbox.Location = new System.Drawing.Point(637, 475);
+            this.EmergencyNumberTextbox.Location = new System.Drawing.Point(637, 492);
             this.EmergencyNumberTextbox.Name = "EmergencyNumberTextbox";
             this.EmergencyNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.EmergencyNumberTextbox.TabIndex = 32;
@@ -278,7 +263,7 @@
             this.EmergencyNumberLabel.AutoSize = true;
             this.EmergencyNumberLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyNumberLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyNumberLabel.Location = new System.Drawing.Point(452, 475);
+            this.EmergencyNumberLabel.Location = new System.Drawing.Point(452, 492);
             this.EmergencyNumberLabel.Name = "EmergencyNumberLabel";
             this.EmergencyNumberLabel.Size = new System.Drawing.Size(179, 23);
             this.EmergencyNumberLabel.TabIndex = 31;
@@ -286,7 +271,7 @@
             // 
             // EmergencyAddressTextbox
             // 
-            this.EmergencyAddressTextbox.Location = new System.Drawing.Point(134, 521);
+            this.EmergencyAddressTextbox.Location = new System.Drawing.Point(134, 538);
             this.EmergencyAddressTextbox.Name = "EmergencyAddressTextbox";
             this.EmergencyAddressTextbox.Size = new System.Drawing.Size(501, 27);
             this.EmergencyAddressTextbox.TabIndex = 30;
@@ -296,7 +281,7 @@
             this.EmergencyAddressLabel.AutoSize = true;
             this.EmergencyAddressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyAddressLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyAddressLabel.Location = new System.Drawing.Point(34, 521);
+            this.EmergencyAddressLabel.Location = new System.Drawing.Point(34, 538);
             this.EmergencyAddressLabel.Name = "EmergencyAddressLabel";
             this.EmergencyAddressLabel.Size = new System.Drawing.Size(94, 23);
             this.EmergencyAddressLabel.TabIndex = 29;
@@ -304,7 +289,7 @@
             // 
             // EmergencyNameTextbox
             // 
-            this.EmergencyNameTextbox.Location = new System.Drawing.Point(116, 479);
+            this.EmergencyNameTextbox.Location = new System.Drawing.Point(116, 496);
             this.EmergencyNameTextbox.Name = "EmergencyNameTextbox";
             this.EmergencyNameTextbox.Size = new System.Drawing.Size(307, 27);
             this.EmergencyNameTextbox.TabIndex = 22;
@@ -314,7 +299,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label6.Location = new System.Drawing.Point(266, 509);
+            this.label6.Location = new System.Drawing.Point(266, 526);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 37);
             this.label6.TabIndex = 21;
@@ -324,11 +309,21 @@
             this.EmergencyNameLabel.AutoSize = true;
             this.EmergencyNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyNameLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyNameLabel.Location = new System.Drawing.Point(34, 479);
+            this.EmergencyNameLabel.Location = new System.Drawing.Point(34, 496);
             this.EmergencyNameLabel.Name = "EmergencyNameLabel";
             this.EmergencyNameLabel.Size = new System.Drawing.Size(76, 23);
             this.EmergencyNameLabel.TabIndex = 20;
             this.EmergencyNameLabel.Text = "Name:";
+            // 
+            // DoneButton
+            // 
+            this.DoneButton.Location = new System.Drawing.Point(673, 592);
+            this.DoneButton.Name = "DoneButton";
+            this.DoneButton.Size = new System.Drawing.Size(94, 35);
+            this.DoneButton.TabIndex = 33;
+            this.DoneButton.Text = "Done";
+            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // ContactTracingForm
             // 
@@ -336,6 +331,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(913, 653);
+            this.Controls.Add(this.DoneButton);
             this.Controls.Add(this.EmergencyNumberTextbox);
             this.Controls.Add(this.EmergencyNumberLabel);
             this.Controls.Add(this.EmergencyAddressTextbox);
@@ -355,7 +351,6 @@
             this.Controls.Add(this.TimeinLabel);
             this.Controls.Add(this.DateTextbox);
             this.Controls.Add(this.DateLabel);
-            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Nametextbox);
             this.Controls.Add(this.SexLabel);
             this.Controls.Add(this.Namelabel);
@@ -381,8 +376,6 @@
         private Label Namelabel;
         private Label SexLabel;
         private TextBox Nametextbox;
-        private SaveFileDialog saveFileDialog1;
-        private Button SaveButton;
         private Label DateLabel;
         private TextBox DateTextbox;
         private Label TimeinLabel;
@@ -402,5 +395,6 @@
         private TextBox EmergencyNameTextbox;
         private Label label6;
         private Label EmergencyNameLabel;
+        private Button DoneButton;
     }
 }
