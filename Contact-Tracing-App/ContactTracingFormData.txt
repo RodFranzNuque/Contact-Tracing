@@ -1,0 +1,26 @@
+Visitor's Information
+Name:new
+Address:QC
+Contact Number:12345
+Date:January 23 2022
+Time In:11
+Time Out:12
+Emergency Contact's Information
+Name:Trial
+Contact Number:09802357489374
+Address:QC
+
+
+Visitor's Information
+Name:Modify
+Address:Manila
+Contact Number:099999999
+Date:February 14 2022
+Time In:12
+Time Out:13
+Emergency Contact's Information
+Name:ver
+Contact Number:7654782369
+Address:Manila
+
+

@@ -149,7 +149,9 @@ namespace Contact_Tracing_App
 
         private void DoneButton_Click(object sender, EventArgs e)
         {
-            StreamWriter file = File.AppendText(@"C:\Users\rodfr\Downloads\ContactTracingform.txt");
+            MessageBox.Show("Information Saved");
+
+            StreamWriter file = File.AppendText(@"C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\ContactTracingFormData.txt");
             file.WriteLine("Visitor's Information");
             file.WriteLine("Name:" + Nametextbox.Text);
             file.WriteLine("Address:" + AddressTextBox.Text);
@@ -157,13 +159,36 @@ namespace Contact_Tracing_App
             file.WriteLine("Date:" + DateTextbox.Text);
             file.WriteLine("Time In:" + TimeInTextbox.Text);
             file.WriteLine("Time Out:" + TimeoutTextbox.Text);
-            file.WriteLine("");            file.WriteLine("Emergency Contact's Information");
-            file.WriteLine("Name" + EmergencyNameTextbox.Text);
-            file.WriteLine("Contact Number" + EmergencyNumberTextbox.Text);
-            file.WriteLine("Address" + EmergencyAddressTextbox.Text);
+            file.WriteLine("Emergency Contact's Information");
+            file.WriteLine("Name:" + EmergencyNameTextbox.Text);
+            file.WriteLine("Contact Number:" + EmergencyNumberTextbox.Text);
+            file.WriteLine("Address:" + EmergencyAddressTextbox.Text);
             file.WriteLine("");
             file.WriteLine("");
             file.Close();
+
+            Nametextbox.Clear();
+            AddressTextBox.Clear();
+            ContactNumberTextbox.Clear();
+            DateTextbox.Clear();
+            TimeInTextbox.Clear();
+            TimeoutTextbox.Clear();
+            EmergencyNameTextbox.Clear();
+            EmergencyNumberTextbox.Clear();
+            EmergencyAddressTextbox.Clear();
+
+
+
+        }
+
+        private void label1_Click_5(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_6(object sender, EventArgs e)
+        {
+
         }
     }
 }

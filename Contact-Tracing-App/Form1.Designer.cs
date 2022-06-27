@@ -57,6 +57,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.EmergencyNameLabel = new System.Windows.Forms.Label();
             this.DoneButton = new System.Windows.Forms.Button();
+            this.DateFormatLabel = new System.Windows.Forms.Label();
+            this.DateFormatExample = new System.Windows.Forms.Label();
+            this.TimeFormat = new System.Windows.Forms.Label();
+            this.TimeFormatExample = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +154,7 @@
             // 
             this.DateTextbox.Location = new System.Drawing.Point(499, 284);
             this.DateTextbox.Name = "DateTextbox";
-            this.DateTextbox.Size = new System.Drawing.Size(125, 27);
+            this.DateTextbox.Size = new System.Drawing.Size(166, 27);
             this.DateTextbox.TabIndex = 9;
             this.DateTextbox.TextChanged += new System.EventHandler(this.DateTextbox_TextChanged);
             // 
@@ -159,7 +163,7 @@
             this.TimeinLabel.AutoSize = true;
             this.TimeinLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeinLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeinLabel.Location = new System.Drawing.Point(644, 284);
+            this.TimeinLabel.Location = new System.Drawing.Point(665, 284);
             this.TimeinLabel.Name = "TimeinLabel";
             this.TimeinLabel.Size = new System.Drawing.Size(84, 23);
             this.TimeinLabel.TabIndex = 10;
@@ -168,9 +172,9 @@
             // 
             // TimeInTextbox
             // 
-            this.TimeInTextbox.Location = new System.Drawing.Point(734, 284);
+            this.TimeInTextbox.Location = new System.Drawing.Point(755, 284);
             this.TimeInTextbox.Name = "TimeInTextbox";
-            this.TimeInTextbox.Size = new System.Drawing.Size(141, 27);
+            this.TimeInTextbox.Size = new System.Drawing.Size(120, 27);
             this.TimeInTextbox.TabIndex = 11;
             this.TimeInTextbox.TextChanged += new System.EventHandler(this.TimeInTextbox_TextChanged);
             // 
@@ -179,7 +183,7 @@
             this.TimeoutLabel.AutoSize = true;
             this.TimeoutLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeoutLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeoutLabel.Location = new System.Drawing.Point(630, 326);
+            this.TimeoutLabel.Location = new System.Drawing.Point(651, 326);
             this.TimeoutLabel.Name = "TimeoutLabel";
             this.TimeoutLabel.Size = new System.Drawing.Size(98, 23);
             this.TimeoutLabel.TabIndex = 12;
@@ -188,9 +192,9 @@
             // 
             // TimeoutTextbox
             // 
-            this.TimeoutTextbox.Location = new System.Drawing.Point(734, 326);
+            this.TimeoutTextbox.Location = new System.Drawing.Point(755, 326);
             this.TimeoutTextbox.Name = "TimeoutTextbox";
-            this.TimeoutTextbox.Size = new System.Drawing.Size(141, 27);
+            this.TimeoutTextbox.Size = new System.Drawing.Size(120, 27);
             this.TimeoutTextbox.TabIndex = 13;
             this.TimeoutTextbox.TextChanged += new System.EventHandler(this.TimeoutTextbox_TextChanged);
             // 
@@ -338,12 +342,62 @@
             this.DoneButton.UseVisualStyleBackColor = true;
             this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
+            // DateFormatLabel
+            // 
+            this.DateFormatLabel.AutoSize = true;
+            this.DateFormatLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.DateFormatLabel.ForeColor = System.Drawing.Color.SkyBlue;
+            this.DateFormatLabel.Location = new System.Drawing.Point(499, 231);
+            this.DateFormatLabel.Name = "DateFormatLabel";
+            this.DateFormatLabel.Size = new System.Drawing.Size(147, 25);
+            this.DateFormatLabel.TabIndex = 34;
+            this.DateFormatLabel.Text = "Month/Day/Year";
+            this.DateFormatLabel.Click += new System.EventHandler(this.label1_Click_5);
+            // 
+            // DateFormatExample
+            // 
+            this.DateFormatExample.AutoSize = true;
+            this.DateFormatExample.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.DateFormatExample.ForeColor = System.Drawing.Color.SkyBlue;
+            this.DateFormatExample.Location = new System.Drawing.Point(499, 256);
+            this.DateFormatExample.Name = "DateFormatExample";
+            this.DateFormatExample.Size = new System.Drawing.Size(108, 25);
+            this.DateFormatExample.TabIndex = 35;
+            this.DateFormatExample.Text = "00/00/0000";
+            // 
+            // TimeFormat
+            // 
+            this.TimeFormat.AutoSize = true;
+            this.TimeFormat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.TimeFormat.ForeColor = System.Drawing.Color.SkyBlue;
+            this.TimeFormat.Location = new System.Drawing.Point(728, 231);
+            this.TimeFormat.Name = "TimeFormat";
+            this.TimeFormat.Size = new System.Drawing.Size(156, 25);
+            this.TimeFormat.TabIndex = 36;
+            this.TimeFormat.Text = "Use 24 hour value";
+            this.TimeFormat.Click += new System.EventHandler(this.label1_Click_6);
+            // 
+            // TimeFormatExample
+            // 
+            this.TimeFormatExample.AutoSize = true;
+            this.TimeFormatExample.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.TimeFormatExample.ForeColor = System.Drawing.Color.SkyBlue;
+            this.TimeFormatExample.Location = new System.Drawing.Point(819, 256);
+            this.TimeFormatExample.Name = "TimeFormatExample";
+            this.TimeFormatExample.Size = new System.Drawing.Size(56, 25);
+            this.TimeFormatExample.TabIndex = 37;
+            this.TimeFormatExample.Text = "00:00";
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(913, 653);
+            this.Controls.Add(this.TimeFormatExample);
+            this.Controls.Add(this.TimeFormat);
+            this.Controls.Add(this.DateFormatExample);
+            this.Controls.Add(this.DateFormatLabel);
             this.Controls.Add(this.DoneButton);
             this.Controls.Add(this.EmergencyNumberTextbox);
             this.Controls.Add(this.EmergencyNumberLabel);
@@ -409,5 +463,9 @@
         private Label label6;
         private Label EmergencyNameLabel;
         private Button DoneButton;
+        private Label DateFormatLabel;
+        private Label DateFormatExample;
+        private Label TimeFormat;
+        private Label TimeFormatExample;
     }
 }
