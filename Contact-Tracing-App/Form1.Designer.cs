@@ -63,6 +63,10 @@
             this.TimeFormatExample = new System.Windows.Forms.Label();
             this.DataListbox = new System.Windows.Forms.ListBox();
             this.Informationsubmittedlabel = new System.Windows.Forms.Label();
+            this.Searchtextbox = new System.Windows.Forms.TextBox();
+            this.Searchboxlabel = new System.Windows.Forms.Label();
+            this.Resultsbox = new System.Windows.Forms.RichTextBox();
+            this.SearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -411,12 +415,52 @@
             this.Informationsubmittedlabel.TabIndex = 39;
             this.Informationsubmittedlabel.Text = "Information submitted:";
             // 
+            // Searchtextbox
+            // 
+            this.Searchtextbox.Location = new System.Drawing.Point(1065, 300);
+            this.Searchtextbox.Name = "Searchtextbox";
+            this.Searchtextbox.Size = new System.Drawing.Size(238, 27);
+            this.Searchtextbox.TabIndex = 40;
+            // 
+            // Searchboxlabel
+            // 
+            this.Searchboxlabel.AutoSize = true;
+            this.Searchboxlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Searchboxlabel.ForeColor = System.Drawing.Color.SkyBlue;
+            this.Searchboxlabel.Location = new System.Drawing.Point(916, 300);
+            this.Searchboxlabel.Name = "Searchboxlabel";
+            this.Searchboxlabel.Size = new System.Drawing.Size(134, 46);
+            this.Searchboxlabel.TabIndex = 41;
+            this.Searchboxlabel.Text = "Search date:\r\n00-00-0000";
+            // 
+            // Resultsbox
+            // 
+            this.Resultsbox.Location = new System.Drawing.Point(925, 357);
+            this.Resultsbox.Name = "Resultsbox";
+            this.Resultsbox.Size = new System.Drawing.Size(511, 269);
+            this.Resultsbox.TabIndex = 42;
+            this.Resultsbox.Text = "";
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(1309, 300);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(94, 29);
+            this.SearchButton.TabIndex = 43;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1460, 653);
+            this.Controls.Add(this.SearchButton);
+            this.Controls.Add(this.Resultsbox);
+            this.Controls.Add(this.Searchboxlabel);
+            this.Controls.Add(this.Searchtextbox);
             this.Controls.Add(this.Informationsubmittedlabel);
             this.Controls.Add(this.DataListbox);
             this.Controls.Add(this.TimeFormatExample);
@@ -494,5 +538,9 @@
         private Label TimeFormatExample;
         private ListBox DataListbox;
         private Label Informationsubmittedlabel;
+        private TextBox Searchtextbox;
+        private Label Searchboxlabel;
+        private RichTextBox Resultsbox;
+        private Button SearchButton;
     }
 }

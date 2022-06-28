@@ -1,0 +1,13 @@
+Visitor's Information
+Name:Rod
+Address:QC
+Contact Number:098
+Date:11-12-2021
+Time In:12:00
+Time Out:14:00
+Emergency Contact's Information
+Name:Franz
+Contact Number:097
+Address:QC
+
+

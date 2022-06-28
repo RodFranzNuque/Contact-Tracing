@@ -1,0 +1,13 @@
+Visitor's Information
+Name:Eric
+Address:
+Contact Number:
+Date:03-03-2022
+Time In:
+Time Out:
+Emergency Contact's Information
+Name:
+Contact Number:
+Address:
+
+

@@ -1,0 +1,13 @@
+Visitor's Information
+Name:try
+Address:
+Contact Number:
+Date:
+Time In:
+Time Out:
+Emergency Contact's Information
+Name:
+Contact Number:
+Address:
+
+

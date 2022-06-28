@@ -1,0 +1,13 @@
+Visitor's Information
+Name:Juyeon
+Address:korea
+Contact Number:09876
+Date:04-04-2022
+Time In:12:00
+Time Out:13:00
+Emergency Contact's Information
+Name:Rod
+Contact Number:0965
+Address:ph
+
+
