@@ -1,0 +1,13 @@
+Visitor's Information
+Name:tester
+Address:qc
+Contact Number:0999
+Date:02-23-2022
+Time In:12:00
+Time Out:13:00
+Emergency Contact's Information
+Name:Tested
+Contact Number:096
+Address:qc
+
+

@@ -61,6 +61,8 @@
             this.DateFormatExample = new System.Windows.Forms.Label();
             this.TimeFormat = new System.Windows.Forms.Label();
             this.TimeFormatExample = new System.Windows.Forms.Label();
+            this.DataListbox = new System.Windows.Forms.ListBox();
+            this.Informationsubmittedlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@
             this.ConsentCheckbox.Font = new System.Drawing.Font("Helvetica Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConsentCheckbox.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.ConsentCheckbox.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ConsentCheckbox.Location = new System.Drawing.Point(44, 154);
+            this.ConsentCheckbox.Location = new System.Drawing.Point(44, 152);
             this.ConsentCheckbox.Name = "ConsentCheckbox";
             this.ConsentCheckbox.Size = new System.Drawing.Size(840, 37);
             this.ConsentCheckbox.TabIndex = 1;
@@ -361,9 +363,9 @@
             this.DateFormatExample.ForeColor = System.Drawing.Color.SkyBlue;
             this.DateFormatExample.Location = new System.Drawing.Point(499, 256);
             this.DateFormatExample.Name = "DateFormatExample";
-            this.DateFormatExample.Size = new System.Drawing.Size(108, 25);
+            this.DateFormatExample.Size = new System.Drawing.Size(106, 25);
             this.DateFormatExample.TabIndex = 35;
-            this.DateFormatExample.Text = "00/00/0000";
+            this.DateFormatExample.Text = "00-00-0000";
             // 
             // TimeFormat
             // 
@@ -388,12 +390,35 @@
             this.TimeFormatExample.TabIndex = 37;
             this.TimeFormatExample.Text = "00:00";
             // 
+            // DataListbox
+            // 
+            this.DataListbox.FormattingEnabled = true;
+            this.DataListbox.ItemHeight = 20;
+            this.DataListbox.Location = new System.Drawing.Point(916, 37);
+            this.DataListbox.Name = "DataListbox";
+            this.DataListbox.Size = new System.Drawing.Size(532, 244);
+            this.DataListbox.TabIndex = 38;
+            this.DataListbox.SelectedIndexChanged += new System.EventHandler(this.DataSubmitted_SelectedIndexChanged);
+            // 
+            // Informationsubmittedlabel
+            // 
+            this.Informationsubmittedlabel.AutoSize = true;
+            this.Informationsubmittedlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Informationsubmittedlabel.ForeColor = System.Drawing.Color.SkyBlue;
+            this.Informationsubmittedlabel.Location = new System.Drawing.Point(916, 11);
+            this.Informationsubmittedlabel.Name = "Informationsubmittedlabel";
+            this.Informationsubmittedlabel.Size = new System.Drawing.Size(229, 23);
+            this.Informationsubmittedlabel.TabIndex = 39;
+            this.Informationsubmittedlabel.Text = "Information submitted:";
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(913, 653);
+            this.ClientSize = new System.Drawing.Size(1460, 653);
+            this.Controls.Add(this.Informationsubmittedlabel);
+            this.Controls.Add(this.DataListbox);
             this.Controls.Add(this.TimeFormatExample);
             this.Controls.Add(this.TimeFormat);
             this.Controls.Add(this.DateFormatExample);
@@ -467,5 +492,7 @@
         private Label DateFormatExample;
         private Label TimeFormat;
         private Label TimeFormatExample;
+        private ListBox DataListbox;
+        private Label Informationsubmittedlabel;
     }
 }

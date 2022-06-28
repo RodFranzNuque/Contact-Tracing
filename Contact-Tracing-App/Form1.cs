@@ -151,7 +151,12 @@ namespace Contact_Tracing_App
         {
             MessageBox.Show("Information Saved");
 
-            StreamWriter file = File.AppendText(@"C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\ContactTracingFormData.txt");
+            string Date = DateTextbox.Text;
+            string filepath = @"C:\Users\rodfr\source\repos\Contact-Tracing-App\" + Date + ".txt";
+            
+
+
+            StreamWriter file = File.AppendText(@"C:\Users\rodfr\source\repos\Contact-Tracing-App\" + Date + ".txt");
             file.WriteLine("Visitor's Information");
             file.WriteLine("Name:" + Nametextbox.Text);
             file.WriteLine("Address:" + AddressTextBox.Text);
@@ -177,6 +182,55 @@ namespace Contact_Tracing_App
             EmergencyNumberTextbox.Clear();
             EmergencyAddressTextbox.Clear();
 
+            StreamReader InfoSubmitted = File.OpenText(@"C:\Users\rodfr\source\repos\Contact-Tracing-App\" + Date + ".txt");
+            string data = InfoSubmitted.ReadToEnd();
+            InfoSubmitted.Close();
+
+            string info = data;
+
+string[] splitter = new string[] { "\n" };
+            string[] ListedData = info.Split(splitter, StringSplitOptions.None);
+
+            string firstline = ListedData[0];
+            string secondline = ListedData[1];
+            string thirdline = ListedData[2];
+            string fourthline = ListedData[3];
+            string fifthline = ListedData[4];
+            string sixthline = ListedData[5];
+            string seventhline = ListedData[6];
+            string eighthline = ListedData[7];
+            string ninthline = ListedData[8];
+            string tenthline = ListedData[9];
+            string eleventhline = ListedData[10];
+
+            DataListbox.Items.Add(firstline);
+            DataListbox.Items.Add(secondline);
+            DataListbox.Items.Add(thirdline);
+            DataListbox.Items.Add(fourthline);
+            DataListbox.Items.Add(fifthline);
+            DataListbox.Items.Add(sixthline);
+            DataListbox.Items.Add(seventhline);
+            DataListbox.Items.Add(eighthline);
+            DataListbox.Items.Add(ninthline);
+            DataListbox.Items.Add(tenthline);
+            DataListbox.Items.Add(eleventhline);
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
@@ -189,6 +243,11 @@ namespace Contact_Tracing_App
         private void label1_Click_6(object sender, EventArgs e)
         {
 
+        }
+
+        private void DataSubmitted_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
