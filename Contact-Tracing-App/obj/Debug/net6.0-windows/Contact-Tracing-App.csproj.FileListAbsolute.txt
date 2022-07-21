@@ -15,3 +15,9 @@ C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\ne
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.pdb
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.genruntimeconfig.cache
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\ref\Contact-Tracing-App.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\AForge.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\AForge.Video.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\AForge.Video.DirectShow.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\zxing.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.csproj.CopyComplete
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\QRCoder.dll

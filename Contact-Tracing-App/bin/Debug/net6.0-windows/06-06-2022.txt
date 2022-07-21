@@ -1,0 +1,13 @@
+Visitor's Information
+Name:Rod 
+Address:Quezon city 
+Contact Number:098765432122
+Date:06-06-2022
+Time In:12:00
+Time Out:16:00
+Emergency Contact's Information
+Name:Franz
+Contact Number:098767654
+Address:QC
+
+

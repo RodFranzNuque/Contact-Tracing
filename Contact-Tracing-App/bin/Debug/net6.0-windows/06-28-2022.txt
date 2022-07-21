@@ -1,0 +1,13 @@
+Visitor's Information
+Name:Rod
+Address:QC
+Contact Number:098678564564
+Date:06-28-2022
+Time In:10:00
+Time Out:12:00
+Emergency Contact's Information
+Name:Franz
+Contact Number:09654899
+Address:QC
+
+
