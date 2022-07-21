@@ -38,6 +38,27 @@ namespace Contact_Tracing_App
             InitializeComponent();
         }
 
+        private void qrcodeauto_fill(object sender, QRCodeReadEventArgs e)
+        {
+            string json = e.Data;
+            Contact_Tracing_Form_1.ContactTracingInfo? data = JsonSerializer.Deserialize<Contact_Tracing_Form_1.ContactTracingInfo>(json);
+            if (data is not null)
+            {
+                Nametextbox.Text = data.FullName;
+                AddressTextBox.Text = data.CompleteAddress;
+                ContactNumberTextbox.Text = data.PhoneNumber;
+                TimeInTextbox.Text = data.Timein;
+               TimeoutTextbox.Text= data.Timeout;
+                EmergencyNumberTextbox.Text = data.FullName2;
+                EmergencyAddressTextbox.Text = data.CompleteAddress2;
+                EmergencyNumberTextbox.Text = data.PhoneNumber2;
+
+                
+            }
+
+        }
+
+
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
 
@@ -269,6 +290,7 @@ namespace Contact_Tracing_App
 
         }
 
+        
 
         private void label1_Click_5(object sender, EventArgs e)
         {
@@ -382,6 +404,50 @@ namespace Contact_Tracing_App
         public class QRCodeReadEventArgs
         {
             public string Data { get; set; }
+        }
+
+        private void CodeButton_Click(object sender, EventArgs e)
+        {
+            var data = new Contact_Tracing_Form_1.ContactTracingInfo
+            {
+                FullName = Nametextbox.Text,
+                CompleteAddress = AddressTextBox.Text,
+                PhoneNumber = ContactNumberTextbox.Text,
+                Date = DateTextbox.Text,
+                Timein = TimeInTextbox.Text,
+                Timeout = TimeoutTextbox.Text,
+                FullName2 = EmergencyNameTextbox.Text,
+                CompleteAddress2 = EmergencyAddressTextbox.Text,
+                PhoneNumber2 = EmergencyNumberTextbox.Text,
+
+            };
+            var width = QRCODEPictureBox.Width;
+            var height = QRCODEPictureBox.Height;
+            IBarcodeWriter<PixelData> writer = new BarcodeWriterPixelData
+            {
+
+                Format = BarcodeFormat.QR_CODE,
+                Options = new EncodingOptions
+                {
+                    Height = QRCODEPictureBox.Height,
+                    Width = QRCODEPictureBox.Width
+                },
+            };
+
+            var pixelData = writer.Write(JsonSerializer.Serialize(data));
+            var Bitmap = new Bitmap(width, height);
+            foreach ((byte[] pixel, int index) in pixelData.Pixels.Chunk(4).Zip(Enumerable.Range(0, Width * Height)))
+            {
+
+                var color = Color.FromArgb(pixel[3], pixel[2], pixel[1], pixel[0]);
+                var y = index / width;
+                var x = index % width;
+
+                Bitmap.SetPixel(x, y, color);
+
+            }
+            QRCODEPictureBox.Image = Bitmap;
+
         }
     }
 }

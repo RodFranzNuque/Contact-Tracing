@@ -75,8 +75,11 @@
             this.CamComboBox = new System.Windows.Forms.ComboBox();
             this.QRCodeResultsLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.CodeButton = new System.Windows.Forms.Button();
+            this.QRCODEPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QRCODEPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // FormTitle
@@ -473,7 +476,7 @@
             // 
             // OpenCameraButton
             // 
-            this.OpenCameraButton.Location = new System.Drawing.Point(747, 567);
+            this.OpenCameraButton.Location = new System.Drawing.Point(651, 567);
             this.OpenCameraButton.Name = "OpenCameraButton";
             this.OpenCameraButton.Size = new System.Drawing.Size(128, 35);
             this.OpenCameraButton.TabIndex = 45;
@@ -495,7 +498,7 @@
             this.CameraBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CameraBox.Location = new System.Drawing.Point(34, 621);
             this.CameraBox.Name = "CameraBox";
-            this.CameraBox.Size = new System.Drawing.Size(841, 389);
+            this.CameraBox.Size = new System.Drawing.Size(459, 389);
             this.CameraBox.TabIndex = 47;
             this.CameraBox.TabStop = false;
             this.CameraBox.Click += new System.EventHandler(this.CameraBox_Click);
@@ -516,7 +519,7 @@
             this.CamComboBox.FormattingEnabled = true;
             this.CamComboBox.Location = new System.Drawing.Point(469, 571);
             this.CamComboBox.Name = "CamComboBox";
-            this.CamComboBox.Size = new System.Drawing.Size(274, 28);
+            this.CamComboBox.Size = new System.Drawing.Size(177, 28);
             this.CamComboBox.TabIndex = 49;
             // 
             // QRCodeResultsLabel
@@ -536,12 +539,33 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // CodeButton
+            // 
+            this.CodeButton.Location = new System.Drawing.Point(781, 567);
+            this.CodeButton.Name = "CodeButton";
+            this.CodeButton.Size = new System.Drawing.Size(128, 35);
+            this.CodeButton.TabIndex = 51;
+            this.CodeButton.Text = "Generate Code";
+            this.CodeButton.UseVisualStyleBackColor = true;
+            this.CodeButton.Click += new System.EventHandler(this.CodeButton_Click);
+            // 
+            // QRCODEPictureBox
+            // 
+            this.QRCODEPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.QRCODEPictureBox.Location = new System.Drawing.Point(517, 621);
+            this.QRCODEPictureBox.Name = "QRCODEPictureBox";
+            this.QRCODEPictureBox.Size = new System.Drawing.Size(376, 389);
+            this.QRCODEPictureBox.TabIndex = 52;
+            this.QRCODEPictureBox.TabStop = false;
+            // 
             // ContactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1460, 1022);
+            this.Controls.Add(this.QRCODEPictureBox);
+            this.Controls.Add(this.CodeButton);
             this.Controls.Add(this.QRCodeResultsLabel);
             this.Controls.Add(this.CamComboBox);
             this.Controls.Add(this.Cameralabel);
@@ -593,6 +617,7 @@
             this.Load += new System.EventHandler(this.ContactTracingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QRCODEPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,5 +670,7 @@
         private ComboBox CamComboBox;
         private Label QRCodeResultsLabel;
         private System.Windows.Forms.Timer timer1;
+        private Button CodeButton;
+        private PictureBox QRCODEPictureBox;
     }
 }
