@@ -1,0 +1,13 @@
+Visitor's Information
+Name:trial
+Address:Philippines
+Contact Number:0987876672533
+Date:12-12-2022
+Time In:12:00
+Time Out:13:00
+Emergency Contact's Information
+Name:Error
+Contact Number:09763485767354
+Address:USA
+
+

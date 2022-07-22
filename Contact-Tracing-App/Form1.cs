@@ -27,10 +27,8 @@ namespace Contact_Tracing_App
 {
     public partial class ContactTracingForm : Form
     {
-        private BarcodeReaderGeneric barcodeReader = new BarcodeReaderGeneric(new QRCodeReader(), null, null);
-
-        public delegate void QRCodeReadEventHandler(object sender, QRCodeReadEventArgs eventArgs);
-        public event QRCodeReadEventHandler QRCodeRead;
+        private Form2 form2;
+        
 
 
         public ContactTracingForm()
@@ -38,7 +36,7 @@ namespace Contact_Tracing_App
             InitializeComponent();
         }
 
-        private void qrcodeauto_fill(object sender, QRCodeReadEventArgs e)
+        private void qrcodeauto_fill(object? sender, QRCodeReadEventArgs e)
         {
             string json = e.Data;
             Contact_Tracing_Form_1.ContactTracingInfo? data = JsonSerializer.Deserialize<Contact_Tracing_Form_1.ContactTracingInfo>(json);
@@ -46,14 +44,15 @@ namespace Contact_Tracing_App
             {
                 Nametextbox.Text = data.FullName;
                 AddressTextBox.Text = data.CompleteAddress;
+                DateTextbox.Text = data.Date;
                 ContactNumberTextbox.Text = data.PhoneNumber;
                 TimeInTextbox.Text = data.Timein;
-               TimeoutTextbox.Text= data.Timeout;
-                EmergencyNumberTextbox.Text = data.FullName2;
+                TimeoutTextbox.Text = data.Timeout;
+                EmergencyNameTextbox.Text = data.FullName2;
                 EmergencyAddressTextbox.Text = data.CompleteAddress2;
                 EmergencyNumberTextbox.Text = data.PhoneNumber2;
 
-                
+
             }
 
         }
@@ -130,10 +129,7 @@ namespace Contact_Tracing_App
 
         private void ContactTracingForm_Load(object sender, EventArgs e)
         {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection)
-                CamComboBox.Items.Add(filterInfo.Name);
-            CamComboBox.SelectedIndex = 0;
+            
 
         }
 
@@ -279,18 +275,9 @@ namespace Contact_Tracing_App
 
         }
 
-        private void stopCapture()
-        {
-            if (captureDevice is not null)
-            {
-                captureDevice.SignalToStop();
-                captureDevice.WaitForStop();
-                captureDevice = null;
-            }
-
-        }
-
         
+
+
 
         private void label1_Click_5(object sender, EventArgs e)
         {
@@ -314,20 +301,7 @@ namespace Contact_Tracing_App
             search.Close();
         }
 
-        private void OpenCameraButton_Click(object sender, EventArgs e)
-        {
-            captureDevice = new VideoCaptureDevice(filterInfoCollection[CamComboBox.SelectedIndex].MonikerString);
-            captureDevice.NewFrame += CaptureDevice_NewFrame;
-            captureDevice.Start();
-            timer1.Start();
-        }
-
-
-
-        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            CameraBox.Image = (Bitmap)eventArgs.Frame.Clone();
-        }
+        
 
         private void CameraBox_Click(object sender, EventArgs e)
         {
@@ -344,45 +318,13 @@ namespace Contact_Tracing_App
 
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            stopCapture();
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (CameraBox.Image != null)
-            {
+            
 
-                Bitmap bmp = (Bitmap)CameraBox.Image;
-                var rect = new Rectangle(0, 0, bmp.Width, bmp.Height);
 
-                BitmapData bmpData = bmp.LockBits(rect, ImageLockMode.ReadOnly, bmp.PixelFormat);
-                IntPtr ptr = bmpData.Scan0;
-
-                int bytes = Math.Abs(bmpData.Stride) * bmp.Height;
-                byte[] rgbValues = new byte[bytes];
-                System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
-
-                bmp.UnlockBits(bmpData);
-                var bitmapFormat = bmp.PixelFormat switch
-                {
-                    PixelFormat.Format24bppRgb => RGBLuminanceSource.BitmapFormat.RGB24,
-                    PixelFormat.Format32bppRgb => RGBLuminanceSource.BitmapFormat.RGB32,
-                    PixelFormat.Format32bppArgb => RGBLuminanceSource.BitmapFormat.ARGB32,
-                    PixelFormat.Format16bppRgb565 => RGBLuminanceSource.BitmapFormat.RGB565,
-                    PixelFormat.Format16bppGrayScale => RGBLuminanceSource.BitmapFormat.Gray16,
-                    _ => RGBLuminanceSource.BitmapFormat.Unknown,
-                };
-
-                Result result = barcodeReader.Decode(rgbValues, bmp.Width, bmp.Height, bitmapFormat);
-                if (result is not null)
-                {
-
-                    timer1.Stop();
-                    stopCapture();
-                    QRCodeRead(this, new QRCodeReadEventArgs { Data = result.Text });
-                    this.Close();
 
 
 
@@ -395,16 +337,6 @@ namespace Contact_Tracing_App
 
 
                 }
-
-            }
-
-
-        }
-
-        public class QRCodeReadEventArgs
-        {
-            public string Data { get; set; }
-        }
 
         private void CodeButton_Click(object sender, EventArgs e)
         {
@@ -447,7 +379,45 @@ namespace Contact_Tracing_App
 
             }
             QRCODEPictureBox.Image = Bitmap;
+        }
+
+        private void QRcodereader_Click(object sender, EventArgs e)
+        {
+            
+                if (form2 is null)
+                {
+                    form2 = new Form2();
+
+                form2.QRCodeRead += qrcodeauto_fill;
+                form2.FormClosed += (sender, e) =>
+                    {
+                        form2 = null;
+                    };
+                    form2.Show();
+                }
+            }
+
+        private void qrlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QRCODEPictureBox_Click(object sender, EventArgs e)
+        {
 
         }
     }
-}
+    }
+
+
+       
+
+
+        
+        
+
+        
+
+        
+       
+ 

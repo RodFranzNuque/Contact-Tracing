@@ -1,0 +1,13 @@
+Visitor's Information
+Name:The
+Address:korea
+Contact Number:0988787567342
+Date:12-06-2022
+Time In:12:00
+Time Out:16:00
+Emergency Contact's Information
+Name:Boyz
+Contact Number:09862365456235
+Address:Korea
+
+

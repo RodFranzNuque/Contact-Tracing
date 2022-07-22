@@ -21,3 +21,4 @@ C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\ne
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\zxing.dll
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact-Tracing-App.csproj.CopyComplete
 C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\bin\Debug\net6.0-windows\QRCoder.dll
+C:\Users\rodfr\source\repos\Contact-Tracing-App\Contact-Tracing-App\obj\Debug\net6.0-windows\Contact_Tracing_App.Form2.resources

@@ -67,18 +67,14 @@
             this.Searchboxlabel = new System.Windows.Forms.Label();
             this.Resultsbox = new System.Windows.Forms.RichTextBox();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.QRCodelabel = new System.Windows.Forms.Label();
-            this.OpenCameraButton = new System.Windows.Forms.Button();
-            this.QRCodeResultsBox = new System.Windows.Forms.RichTextBox();
-            this.CameraBox = new System.Windows.Forms.PictureBox();
-            this.Cameralabel = new System.Windows.Forms.Label();
-            this.CamComboBox = new System.Windows.Forms.ComboBox();
-            this.QRCodeResultsLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CodeButton = new System.Windows.Forms.Button();
             this.QRCODEPictureBox = new System.Windows.Forms.PictureBox();
+            this.QRcodereader = new System.Windows.Forms.Button();
+            this.qrlabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QRCODEPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +83,7 @@
             this.FormTitle.AutoSize = true;
             this.FormTitle.Font = new System.Drawing.Font("Bauhaus 93", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormTitle.ForeColor = System.Drawing.Color.SkyBlue;
-            this.FormTitle.Location = new System.Drawing.Point(23, 25);
+            this.FormTitle.Location = new System.Drawing.Point(14, 44);
             this.FormTitle.Name = "FormTitle";
             this.FormTitle.Size = new System.Drawing.Size(870, 91);
             this.FormTitle.TabIndex = 0;
@@ -104,7 +100,7 @@
             this.ConsentCheckbox.Font = new System.Drawing.Font("Helvetica Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConsentCheckbox.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.ConsentCheckbox.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ConsentCheckbox.Location = new System.Drawing.Point(44, 152);
+            this.ConsentCheckbox.Location = new System.Drawing.Point(44, 196);
             this.ConsentCheckbox.Name = "ConsentCheckbox";
             this.ConsentCheckbox.Size = new System.Drawing.Size(840, 37);
             this.ConsentCheckbox.TabIndex = 1;
@@ -118,7 +114,7 @@
             this.FormInstruction.AutoSize = true;
             this.FormInstruction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.FormInstruction.ForeColor = System.Drawing.Color.SkyBlue;
-            this.FormInstruction.Location = new System.Drawing.Point(44, 116);
+            this.FormInstruction.Location = new System.Drawing.Point(44, 150);
             this.FormInstruction.Name = "FormInstruction";
             this.FormInstruction.Size = new System.Drawing.Size(617, 20);
             this.FormInstruction.TabIndex = 2;
@@ -131,7 +127,7 @@
             this.Namelabel.AutoSize = true;
             this.Namelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Namelabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Namelabel.Location = new System.Drawing.Point(23, 260);
+            this.Namelabel.Location = new System.Drawing.Point(23, 335);
             this.Namelabel.Name = "Namelabel";
             this.Namelabel.Size = new System.Drawing.Size(76, 23);
             this.Namelabel.TabIndex = 3;
@@ -151,7 +147,7 @@
             // 
             // Nametextbox
             // 
-            this.Nametextbox.Location = new System.Drawing.Point(105, 260);
+            this.Nametextbox.Location = new System.Drawing.Point(105, 335);
             this.Nametextbox.Name = "Nametextbox";
             this.Nametextbox.Size = new System.Drawing.Size(307, 27);
             this.Nametextbox.TabIndex = 6;
@@ -162,7 +158,7 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DateLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.DateLabel.Location = new System.Drawing.Point(431, 260);
+            this.DateLabel.Location = new System.Drawing.Point(431, 335);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(62, 23);
             this.DateLabel.TabIndex = 8;
@@ -170,7 +166,7 @@
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(499, 260);
+            this.DateTextbox.Location = new System.Drawing.Point(499, 335);
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(166, 27);
             this.DateTextbox.TabIndex = 9;
@@ -181,7 +177,7 @@
             this.TimeinLabel.AutoSize = true;
             this.TimeinLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeinLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeinLabel.Location = new System.Drawing.Point(665, 260);
+            this.TimeinLabel.Location = new System.Drawing.Point(665, 335);
             this.TimeinLabel.Name = "TimeinLabel";
             this.TimeinLabel.Size = new System.Drawing.Size(84, 23);
             this.TimeinLabel.TabIndex = 10;
@@ -190,7 +186,7 @@
             // 
             // TimeInTextbox
             // 
-            this.TimeInTextbox.Location = new System.Drawing.Point(755, 260);
+            this.TimeInTextbox.Location = new System.Drawing.Point(755, 335);
             this.TimeInTextbox.Name = "TimeInTextbox";
             this.TimeInTextbox.Size = new System.Drawing.Size(120, 27);
             this.TimeInTextbox.TabIndex = 11;
@@ -201,7 +197,7 @@
             this.TimeoutLabel.AutoSize = true;
             this.TimeoutLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeoutLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeoutLabel.Location = new System.Drawing.Point(651, 302);
+            this.TimeoutLabel.Location = new System.Drawing.Point(651, 377);
             this.TimeoutLabel.Name = "TimeoutLabel";
             this.TimeoutLabel.Size = new System.Drawing.Size(98, 23);
             this.TimeoutLabel.TabIndex = 12;
@@ -210,7 +206,7 @@
             // 
             // TimeoutTextbox
             // 
-            this.TimeoutTextbox.Location = new System.Drawing.Point(755, 302);
+            this.TimeoutTextbox.Location = new System.Drawing.Point(755, 377);
             this.TimeoutTextbox.Name = "TimeoutTextbox";
             this.TimeoutTextbox.Size = new System.Drawing.Size(120, 27);
             this.TimeoutTextbox.TabIndex = 13;
@@ -221,7 +217,7 @@
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddressLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.AddressLabel.Location = new System.Drawing.Point(23, 302);
+            this.AddressLabel.Location = new System.Drawing.Point(23, 377);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(94, 23);
             this.AddressLabel.TabIndex = 14;
@@ -230,7 +226,7 @@
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(123, 302);
+            this.AddressTextBox.Location = new System.Drawing.Point(123, 377);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(501, 27);
             this.AddressTextBox.TabIndex = 15;
@@ -241,7 +237,7 @@
             this.ContactNumberLabel.AutoSize = true;
             this.ContactNumberLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ContactNumberLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.ContactNumberLabel.Location = new System.Drawing.Point(23, 346);
+            this.ContactNumberLabel.Location = new System.Drawing.Point(23, 421);
             this.ContactNumberLabel.Name = "ContactNumberLabel";
             this.ContactNumberLabel.Size = new System.Drawing.Size(179, 23);
             this.ContactNumberLabel.TabIndex = 16;
@@ -250,7 +246,7 @@
             // 
             // ContactNumberTextbox
             // 
-            this.ContactNumberTextbox.Location = new System.Drawing.Point(208, 346);
+            this.ContactNumberTextbox.Location = new System.Drawing.Point(208, 421);
             this.ContactNumberTextbox.Name = "ContactNumberTextbox";
             this.ContactNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.ContactNumberTextbox.TabIndex = 17;
@@ -261,7 +257,7 @@
             this.VisitorInfoLabel.AutoSize = true;
             this.VisitorInfoLabel.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.VisitorInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.VisitorInfoLabel.Location = new System.Drawing.Point(23, 214);
+            this.VisitorInfoLabel.Location = new System.Drawing.Point(23, 289);
             this.VisitorInfoLabel.Name = "VisitorInfoLabel";
             this.VisitorInfoLabel.Size = new System.Drawing.Size(335, 40);
             this.VisitorInfoLabel.TabIndex = 18;
@@ -273,7 +269,7 @@
             this.EmergencyContactInfoLabel.AutoSize = true;
             this.EmergencyContactInfoLabel.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.EmergencyContactInfoLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyContactInfoLabel.Location = new System.Drawing.Point(23, 396);
+            this.EmergencyContactInfoLabel.Location = new System.Drawing.Point(12, 476);
             this.EmergencyContactInfoLabel.Name = "EmergencyContactInfoLabel";
             this.EmergencyContactInfoLabel.Size = new System.Drawing.Size(539, 40);
             this.EmergencyContactInfoLabel.TabIndex = 19;
@@ -282,7 +278,7 @@
             // 
             // EmergencyNumberTextbox
             // 
-            this.EmergencyNumberTextbox.Location = new System.Drawing.Point(637, 451);
+            this.EmergencyNumberTextbox.Location = new System.Drawing.Point(626, 531);
             this.EmergencyNumberTextbox.Name = "EmergencyNumberTextbox";
             this.EmergencyNumberTextbox.Size = new System.Drawing.Size(238, 27);
             this.EmergencyNumberTextbox.TabIndex = 32;
@@ -293,7 +289,7 @@
             this.EmergencyNumberLabel.AutoSize = true;
             this.EmergencyNumberLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyNumberLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyNumberLabel.Location = new System.Drawing.Point(452, 451);
+            this.EmergencyNumberLabel.Location = new System.Drawing.Point(441, 531);
             this.EmergencyNumberLabel.Name = "EmergencyNumberLabel";
             this.EmergencyNumberLabel.Size = new System.Drawing.Size(179, 23);
             this.EmergencyNumberLabel.TabIndex = 31;
@@ -302,7 +298,7 @@
             // 
             // EmergencyAddressTextbox
             // 
-            this.EmergencyAddressTextbox.Location = new System.Drawing.Point(134, 497);
+            this.EmergencyAddressTextbox.Location = new System.Drawing.Point(123, 577);
             this.EmergencyAddressTextbox.Name = "EmergencyAddressTextbox";
             this.EmergencyAddressTextbox.Size = new System.Drawing.Size(501, 27);
             this.EmergencyAddressTextbox.TabIndex = 30;
@@ -313,7 +309,7 @@
             this.EmergencyAddressLabel.AutoSize = true;
             this.EmergencyAddressLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyAddressLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyAddressLabel.Location = new System.Drawing.Point(34, 497);
+            this.EmergencyAddressLabel.Location = new System.Drawing.Point(23, 577);
             this.EmergencyAddressLabel.Name = "EmergencyAddressLabel";
             this.EmergencyAddressLabel.Size = new System.Drawing.Size(94, 23);
             this.EmergencyAddressLabel.TabIndex = 29;
@@ -322,7 +318,7 @@
             // 
             // EmergencyNameTextbox
             // 
-            this.EmergencyNameTextbox.Location = new System.Drawing.Point(116, 455);
+            this.EmergencyNameTextbox.Location = new System.Drawing.Point(105, 535);
             this.EmergencyNameTextbox.Name = "EmergencyNameTextbox";
             this.EmergencyNameTextbox.Size = new System.Drawing.Size(307, 27);
             this.EmergencyNameTextbox.TabIndex = 22;
@@ -333,7 +329,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label6.Location = new System.Drawing.Point(266, 485);
+            this.label6.Location = new System.Drawing.Point(266, 462);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 37);
             this.label6.TabIndex = 21;
@@ -343,7 +339,7 @@
             this.EmergencyNameLabel.AutoSize = true;
             this.EmergencyNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EmergencyNameLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.EmergencyNameLabel.Location = new System.Drawing.Point(34, 455);
+            this.EmergencyNameLabel.Location = new System.Drawing.Point(23, 535);
             this.EmergencyNameLabel.Name = "EmergencyNameLabel";
             this.EmergencyNameLabel.Size = new System.Drawing.Size(76, 23);
             this.EmergencyNameLabel.TabIndex = 20;
@@ -352,9 +348,9 @@
             // 
             // DoneButton
             // 
-            this.DoneButton.Location = new System.Drawing.Point(781, 493);
+            this.DoneButton.Location = new System.Drawing.Point(741, 573);
             this.DoneButton.Name = "DoneButton";
-            this.DoneButton.Size = new System.Drawing.Size(94, 35);
+            this.DoneButton.Size = new System.Drawing.Size(123, 35);
             this.DoneButton.TabIndex = 33;
             this.DoneButton.Text = "Done";
             this.DoneButton.UseVisualStyleBackColor = true;
@@ -365,7 +361,7 @@
             this.DateFormatLabel.AutoSize = true;
             this.DateFormatLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.DateFormatLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.DateFormatLabel.Location = new System.Drawing.Point(499, 207);
+            this.DateFormatLabel.Location = new System.Drawing.Point(499, 282);
             this.DateFormatLabel.Name = "DateFormatLabel";
             this.DateFormatLabel.Size = new System.Drawing.Size(147, 25);
             this.DateFormatLabel.TabIndex = 34;
@@ -377,7 +373,7 @@
             this.DateFormatExample.AutoSize = true;
             this.DateFormatExample.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.DateFormatExample.ForeColor = System.Drawing.Color.SkyBlue;
-            this.DateFormatExample.Location = new System.Drawing.Point(499, 232);
+            this.DateFormatExample.Location = new System.Drawing.Point(499, 307);
             this.DateFormatExample.Name = "DateFormatExample";
             this.DateFormatExample.Size = new System.Drawing.Size(106, 25);
             this.DateFormatExample.TabIndex = 35;
@@ -388,7 +384,7 @@
             this.TimeFormat.AutoSize = true;
             this.TimeFormat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.TimeFormat.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeFormat.Location = new System.Drawing.Point(728, 207);
+            this.TimeFormat.Location = new System.Drawing.Point(728, 282);
             this.TimeFormat.Name = "TimeFormat";
             this.TimeFormat.Size = new System.Drawing.Size(156, 25);
             this.TimeFormat.TabIndex = 36;
@@ -400,7 +396,7 @@
             this.TimeFormatExample.AutoSize = true;
             this.TimeFormatExample.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.TimeFormatExample.ForeColor = System.Drawing.Color.SkyBlue;
-            this.TimeFormatExample.Location = new System.Drawing.Point(819, 232);
+            this.TimeFormatExample.Location = new System.Drawing.Point(819, 307);
             this.TimeFormatExample.Name = "TimeFormatExample";
             this.TimeFormatExample.Size = new System.Drawing.Size(56, 25);
             this.TimeFormatExample.TabIndex = 37;
@@ -410,9 +406,9 @@
             // 
             this.DataListbox.FormattingEnabled = true;
             this.DataListbox.ItemHeight = 20;
-            this.DataListbox.Location = new System.Drawing.Point(916, 37);
+            this.DataListbox.Location = new System.Drawing.Point(916, 44);
             this.DataListbox.Name = "DataListbox";
-            this.DataListbox.Size = new System.Drawing.Size(532, 244);
+            this.DataListbox.Size = new System.Drawing.Size(532, 424);
             this.DataListbox.TabIndex = 38;
             this.DataListbox.SelectedIndexChanged += new System.EventHandler(this.DataSubmitted_SelectedIndexChanged);
             // 
@@ -421,7 +417,7 @@
             this.Informationsubmittedlabel.AutoSize = true;
             this.Informationsubmittedlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Informationsubmittedlabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Informationsubmittedlabel.Location = new System.Drawing.Point(916, 11);
+            this.Informationsubmittedlabel.Location = new System.Drawing.Point(916, 15);
             this.Informationsubmittedlabel.Name = "Informationsubmittedlabel";
             this.Informationsubmittedlabel.Size = new System.Drawing.Size(229, 23);
             this.Informationsubmittedlabel.TabIndex = 39;
@@ -429,7 +425,7 @@
             // 
             // Searchtextbox
             // 
-            this.Searchtextbox.Location = new System.Drawing.Point(1065, 300);
+            this.Searchtextbox.Location = new System.Drawing.Point(1077, 481);
             this.Searchtextbox.Name = "Searchtextbox";
             this.Searchtextbox.Size = new System.Drawing.Size(238, 27);
             this.Searchtextbox.TabIndex = 40;
@@ -439,7 +435,7 @@
             this.Searchboxlabel.AutoSize = true;
             this.Searchboxlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Searchboxlabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Searchboxlabel.Location = new System.Drawing.Point(916, 300);
+            this.Searchboxlabel.Location = new System.Drawing.Point(928, 481);
             this.Searchboxlabel.Name = "Searchboxlabel";
             this.Searchboxlabel.Size = new System.Drawing.Size(134, 46);
             this.Searchboxlabel.TabIndex = 41;
@@ -447,92 +443,21 @@
             // 
             // Resultsbox
             // 
-            this.Resultsbox.Location = new System.Drawing.Point(925, 357);
+            this.Resultsbox.Location = new System.Drawing.Point(937, 538);
             this.Resultsbox.Name = "Resultsbox";
-            this.Resultsbox.Size = new System.Drawing.Size(511, 260);
+            this.Resultsbox.Size = new System.Drawing.Size(511, 459);
             this.Resultsbox.TabIndex = 42;
             this.Resultsbox.Text = "";
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(1309, 300);
+            this.SearchButton.Location = new System.Drawing.Point(1321, 481);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(94, 29);
             this.SearchButton.TabIndex = 43;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
-            // QRCodelabel
-            // 
-            this.QRCodelabel.AutoSize = true;
-            this.QRCodelabel.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.QRCodelabel.ForeColor = System.Drawing.Color.AliceBlue;
-            this.QRCodelabel.Location = new System.Drawing.Point(23, 551);
-            this.QRCodelabel.Name = "QRCodelabel";
-            this.QRCodelabel.Size = new System.Drawing.Size(338, 56);
-            this.QRCodelabel.TabIndex = 44;
-            this.QRCodelabel.Text = "Use QR Code:";
-            // 
-            // OpenCameraButton
-            // 
-            this.OpenCameraButton.Location = new System.Drawing.Point(651, 567);
-            this.OpenCameraButton.Name = "OpenCameraButton";
-            this.OpenCameraButton.Size = new System.Drawing.Size(128, 35);
-            this.OpenCameraButton.TabIndex = 45;
-            this.OpenCameraButton.Text = "Open Camera";
-            this.OpenCameraButton.UseVisualStyleBackColor = true;
-            this.OpenCameraButton.Click += new System.EventHandler(this.OpenCameraButton_Click);
-            // 
-            // QRCodeResultsBox
-            // 
-            this.QRCodeResultsBox.Location = new System.Drawing.Point(925, 668);
-            this.QRCodeResultsBox.Name = "QRCodeResultsBox";
-            this.QRCodeResultsBox.Size = new System.Drawing.Size(511, 331);
-            this.QRCodeResultsBox.TabIndex = 46;
-            this.QRCodeResultsBox.Text = "";
-            this.QRCodeResultsBox.TextChanged += new System.EventHandler(this.QRCodeResultsBox_TextChanged);
-            // 
-            // CameraBox
-            // 
-            this.CameraBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.CameraBox.Location = new System.Drawing.Point(34, 621);
-            this.CameraBox.Name = "CameraBox";
-            this.CameraBox.Size = new System.Drawing.Size(459, 389);
-            this.CameraBox.TabIndex = 47;
-            this.CameraBox.TabStop = false;
-            this.CameraBox.Click += new System.EventHandler(this.CameraBox_Click);
-            // 
-            // Cameralabel
-            // 
-            this.Cameralabel.AutoSize = true;
-            this.Cameralabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Cameralabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.Cameralabel.Location = new System.Drawing.Point(367, 571);
-            this.Cameralabel.Name = "Cameralabel";
-            this.Cameralabel.Size = new System.Drawing.Size(96, 23);
-            this.Cameralabel.TabIndex = 48;
-            this.Cameralabel.Text = "Camera:";
-            // 
-            // CamComboBox
-            // 
-            this.CamComboBox.FormattingEnabled = true;
-            this.CamComboBox.Location = new System.Drawing.Point(469, 571);
-            this.CamComboBox.Name = "CamComboBox";
-            this.CamComboBox.Size = new System.Drawing.Size(177, 28);
-            this.CamComboBox.TabIndex = 49;
-            // 
-            // QRCodeResultsLabel
-            // 
-            this.QRCodeResultsLabel.AutoSize = true;
-            this.QRCodeResultsLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.QRCodeResultsLabel.ForeColor = System.Drawing.Color.SkyBlue;
-            this.QRCodeResultsLabel.Location = new System.Drawing.Point(925, 632);
-            this.QRCodeResultsLabel.Name = "QRCodeResultsLabel";
-            this.QRCodeResultsLabel.Size = new System.Drawing.Size(217, 23);
-            this.QRCodeResultsLabel.TabIndex = 50;
-            this.QRCodeResultsLabel.Text = "QR Code Information";
-            this.QRCodeResultsLabel.Click += new System.EventHandler(this.label1_Click_7);
             // 
             // timer1
             // 
@@ -541,9 +466,9 @@
             // 
             // CodeButton
             // 
-            this.CodeButton.Location = new System.Drawing.Point(781, 567);
+            this.CodeButton.Location = new System.Drawing.Point(574, 783);
             this.CodeButton.Name = "CodeButton";
-            this.CodeButton.Size = new System.Drawing.Size(128, 35);
+            this.CodeButton.Size = new System.Drawing.Size(123, 35);
             this.CodeButton.TabIndex = 51;
             this.CodeButton.Text = "Generate Code";
             this.CodeButton.UseVisualStyleBackColor = true;
@@ -552,11 +477,57 @@
             // QRCODEPictureBox
             // 
             this.QRCODEPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.QRCODEPictureBox.Location = new System.Drawing.Point(517, 621);
+            this.QRCODEPictureBox.Location = new System.Drawing.Point(23, 690);
             this.QRCODEPictureBox.Name = "QRCODEPictureBox";
-            this.QRCODEPictureBox.Size = new System.Drawing.Size(376, 389);
+            this.QRCODEPictureBox.Size = new System.Drawing.Size(364, 320);
             this.QRCODEPictureBox.TabIndex = 52;
             this.QRCODEPictureBox.TabStop = false;
+            this.QRCODEPictureBox.Click += new System.EventHandler(this.QRCODEPictureBox_Click);
+            // 
+            // QRcodereader
+            // 
+            this.QRcodereader.Location = new System.Drawing.Point(574, 923);
+            this.QRcodereader.Name = "QRcodereader";
+            this.QRcodereader.Size = new System.Drawing.Size(123, 36);
+            this.QRcodereader.TabIndex = 53;
+            this.QRcodereader.Text = "Read QR code";
+            this.QRcodereader.UseVisualStyleBackColor = true;
+            this.QRcodereader.Click += new System.EventHandler(this.QRcodereader_Click);
+            // 
+            // qrlabel
+            // 
+            this.qrlabel.AutoSize = true;
+            this.qrlabel.Font = new System.Drawing.Font("Century Gothic", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.qrlabel.ForeColor = System.Drawing.Color.SkyBlue;
+            this.qrlabel.Location = new System.Drawing.Point(23, 637);
+            this.qrlabel.Name = "qrlabel";
+            this.qrlabel.Size = new System.Drawing.Size(163, 40);
+            this.qrlabel.TabIndex = 54;
+            this.qrlabel.Text = "QR Code";
+            this.qrlabel.Click += new System.EventHandler(this.qrlabel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label1.Location = new System.Drawing.Point(441, 836);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 46);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Got a QR code already? \r\nClick the button below to scan it.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.SkyBlue;
+            this.label2.Location = new System.Drawing.Point(441, 690);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(418, 69);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Want to make your own QR Code?\r\nClick the button below after answering to \r\ngener" +
+    "ate your own.";
             // 
             // ContactTracingForm
             // 
@@ -564,15 +535,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1460, 1022);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.qrlabel);
+            this.Controls.Add(this.QRcodereader);
             this.Controls.Add(this.QRCODEPictureBox);
             this.Controls.Add(this.CodeButton);
-            this.Controls.Add(this.QRCodeResultsLabel);
-            this.Controls.Add(this.CamComboBox);
-            this.Controls.Add(this.Cameralabel);
-            this.Controls.Add(this.CameraBox);
-            this.Controls.Add(this.QRCodeResultsBox);
-            this.Controls.Add(this.OpenCameraButton);
-            this.Controls.Add(this.QRCodelabel);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.Resultsbox);
             this.Controls.Add(this.Searchboxlabel);
@@ -613,10 +581,8 @@
             this.Name = "ContactTracingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Contact Tracing";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.ContactTracingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CameraBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QRCODEPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -662,15 +628,12 @@
         private Label Searchboxlabel;
         private RichTextBox Resultsbox;
         private Button SearchButton;
-        private Label QRCodelabel;
-        private Button OpenCameraButton;
-        private RichTextBox QRCodeResultsBox;
-        private PictureBox CameraBox;
-        private Label Cameralabel;
-        private ComboBox CamComboBox;
-        private Label QRCodeResultsLabel;
         private System.Windows.Forms.Timer timer1;
         private Button CodeButton;
         private PictureBox QRCODEPictureBox;
+        private Button QRcodereader;
+        private Label qrlabel;
+        private Label label1;
+        private Label label2;
     }
 }

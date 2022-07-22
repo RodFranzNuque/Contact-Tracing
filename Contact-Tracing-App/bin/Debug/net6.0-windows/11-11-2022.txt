@@ -1,0 +1,26 @@
+Visitor's Information
+Name:juyeon
+Address:korea
+Contact Number:09876755645
+Date:11-11-2022
+Time In:12:00
+Time Out:14:00
+Emergency Contact's Information
+Name:Eric
+Contact Number:0978675764654
+Address:korea
+
+
+Visitor's Information
+Name:Juyeon lee
+Address:korea
+Contact Number:098786765654
+Date:11-11-2022
+Time In:12:00
+Time Out:16:00
+Emergency Contact's Information
+Name:Eric sohn
+Contact Number:098768756754
+Address:korea
+
+
